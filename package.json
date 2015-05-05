@@ -23,7 +23,7 @@
   ],
   "dependencies": {
     "bcryptjs": "2.1.0",
-    "ldapjs": "0.7.1",
+    "ldapjs": "git://github.com/mcavage/node-ldapjs.git#19f2c167839fc9cfb46fdb8ee1ef5275100fd578",
     "lru-cache": "2.5.0"
   }
 }
