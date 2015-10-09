@@ -1,5 +1,9 @@
 # node-ldapauth-fork Changelog
 
+## 2.3.4
+
+- [issue #25] Fix unhandled 'error' event
+
 ## 2.3.3
 
 - [issue #20] Sanitize user input

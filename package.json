@@ -1,6 +1,6 @@
 {
   "name": "ldapauth-fork",
-  "version": "2.3.3",
+  "version": "2.3.4",
   "main": "./lib/ldapauth.js",
   "description": "Authenticate against an LDAP server",
   "author": "Vesa Poikajärvi <vesa.poikajarvi@iki.fi>",
