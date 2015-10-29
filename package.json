@@ -23,7 +23,7 @@
   ],
   "dependencies": {
     "bcryptjs": "2.1.0",
-    "ldapjs": "0.7.1",
+    "ldapjs": "1.0.0",
     "lru-cache": "2.5.0"
   }
 }
