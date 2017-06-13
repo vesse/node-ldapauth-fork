@@ -2,3 +2,4 @@ node_modules
 .directory
 test/*.js
 out
+tmp
