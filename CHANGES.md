@@ -1,6 +1,6 @@
 # node-ldapauth-fork Changelog
 
-## 4.0.1
+## 4.0.2
 
 - [pull request #49] Re-emit `connectTimeout`
 
