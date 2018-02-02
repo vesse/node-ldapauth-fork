@@ -30,8 +30,8 @@
     "@types/ldapjs": "^1.0.0",
     "@types/node": "^7.0.21",
     "bcryptjs": "^2.4.0",
-    "ldapjs": "^1.0.1",
-    "lru-cache": "^4.0.2"
+    "cached": "^4.3.2",
+    "ldapjs": "^1.0.1"
   },
   "devDependencies": {
     "@types/bunyan": "0.0.36",
