@@ -28,15 +28,15 @@
   },
   "dependencies": {
     "@types/ldapjs": "^1.0.0",
-    "@types/node": "^7.0.21",
+    "@types/node": "^9.6.2",
     "bcryptjs": "^2.4.0",
     "ldapjs": "^1.0.1",
     "lru-cache": "^4.0.2"
   },
   "devDependencies": {
-    "@types/bunyan": "0.0.36",
+    "@types/bunyan": "1.8.4",
     "bunyan": "^1.8.10",
-    "eslint": "^3.19.0",
+    "eslint": "^4.19.1",
     "typescript": "^2.3.3",
     "watch": "^1.0.2"
   }
