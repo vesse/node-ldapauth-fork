@@ -30,7 +30,7 @@
     "@types/ldapjs": "^1.0.0",
     "@types/node": "^9.6.2",
     "bcryptjs": "^2.4.0",
-    "ldapjs": "^1.0.1",
+    "ldapjs": "^1.0.2",
     "lru-cache": "^4.0.2"
   },
   "devDependencies": {
