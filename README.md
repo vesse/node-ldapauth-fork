@@ -53,7 +53,7 @@ ldapauth-fork options:
 ldapauth-fork can look for valid users groups too. Related options:
 
   - `groupSearchBase` - Optional. The base DN from which to search for groups. If defined, also `groupSearchFilter` must be defined for the search to work.
-  - `groupSearchFilter` - Optional. LDAP search filter for groups. Place literal *{{dn}}* in the filter to have it replaced by the property defined with `groupDnProperty` of the found user object. Optionally you can also assign a function instead. The found user is passed to the function and it should return a valid search filter for the group search.
+  - `groupSearchFilter` - Optional. LDAP search filter for groups. Place literal *{{dn}}* in the filter to have it replaced by the property defined with `groupDnProperty` of the found user object. *{{username}}* is also available and will be replaced with the *uid* of the found user. This is useful for example to filter PosixGroups by *memberUid*. Optionally you can also assign a function instead. The found user is passed to the function and it should return a valid search filter for the group search.
   - `groupSearchAttributes` - Optional, default all. Array of attributes to fetch from LDAP server.
   - `groupDnProperty` - Optional, default *dn*. The property of user object to use in *{{dn}}* interpolation of `groupSearchFilter`.
   - `groupSearchScope` - Optional, default *sub*.
