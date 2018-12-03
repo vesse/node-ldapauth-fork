@@ -1,5 +1,8 @@
 # node-ldapauth-fork Changelog
 
+## 4.1.0
+  * [pull request #68] Rebind admin client after reconnect
+
 ## 4.0.2
 
 - [pull request #49] Re-emit `connectTimeout`
