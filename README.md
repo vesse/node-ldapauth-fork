@@ -12,7 +12,7 @@ Multiple [ldapjs](http://ldapjs.org/) client options have been made available.
 
 ## Usage
 
-**Note:** `close` does not work on Node 10. See joyent/node-ldapjs#483 for more information.
+**Note:** `close` does not work on Node 10. See [joyent/node-ldapjs#483](https://github.com/joyent/node-ldapjs/issues/483) for more information.
 
 ```javascript
 var LdapAuth = require('ldapauth-fork');
