@@ -20,7 +20,7 @@
     "node": ">=0.8.0"
   },
   "scripts": {
-    "prepublish": "npm run lint",
+    "prepare": "npm run lint",
     "lint": "eslint ./lib",
     "lint:watch": "watch 'npm run lint' ./lib --wait 0.5",
     "pretest": "cd test && tsc",
@@ -28,16 +28,17 @@
   },
   "dependencies": {
     "@types/ldapjs": "^1.0.0",
-    "@types/node": "^9.6.2",
+    "@types/node": "^10.12.12",
     "bcryptjs": "^2.4.0",
     "ldapjs": "^1.0.2",
-    "lru-cache": "^4.0.2"
+    "lru-cache": "^5.1.1",
+    "moment": "^2.22.2"
   },
   "devDependencies": {
-    "@types/bunyan": "1.8.4",
+    "@types/bunyan": "1.8.5",
     "bunyan": "^1.8.10",
-    "eslint": "^4.19.1",
-    "typescript": "^2.3.3",
+    "eslint": "^5.9.0",
+    "typescript": "^3.2.1",
     "watch": "^1.0.2"
   }
 }
