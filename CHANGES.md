@@ -1,7 +1,12 @@
 # node-ldapauth-fork Changelog
 
+## 4.1.1
+
+  - [issue #74] Remove direct moment.js dependency
+
 ## 4.1.0
-  * [pull request #68] Rebind admin client after reconnect
+
+  - [pull request #68] Rebind admin client after reconnect
 
 ## 4.0.2
 
