@@ -1,5 +1,9 @@
 # node-ldapauth-fork Changelog
 
+## 4.2.0
+
+  - [issue #69, pull request #71] Defer installation of reconnect event listener
+
 ## 4.1.1
 
   - [issue #74] Remove direct moment.js dependency
