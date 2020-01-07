@@ -102,6 +102,11 @@ declare namespace LdapAuth {
          * 5 minutes.
          */
         cache?: boolean;
+
+        /**
+         * If true, then intialize TLS using the starttls mechanism.
+         */
+        starttls?: boolean;
     }
 }
 
