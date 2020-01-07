@@ -1,5 +1,9 @@
 # node-ldapauth-fork Changelog
 
+## 4.3.0
+
+  - [issue #59, pull request #80] Add starttls
+
 ## 4.2.0
 
   - [issue #69, pull request #71] Defer installation of reconnect event listener
