@@ -1,6 +1,6 @@
 {
   "name": "ldapauth-fork",
-  "version": "5.0.0-rc.3",
+  "version": "5.0.0-rc.4",
   "main": "./lib/ldapauth.js",
   "types": "./lib/ldapauth.d.ts",
   "description": "Authenticate against an LDAP server",
