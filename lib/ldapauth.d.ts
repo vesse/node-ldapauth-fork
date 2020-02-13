@@ -5,11 +5,9 @@
 
 /// <reference types="node"/>
 
-import { EventEmitter } from "events";
+import { EventEmitter } from 'events';
 import { ClientOptions, ErrorCallback } from 'ldapjs';
-
-import { SecureContextOptions } from "tls";
-
+import { SecureContextOptions } from 'tls';
 
 declare namespace LdapAuth {
     type Scope = 'base' | 'one' | 'sub';
