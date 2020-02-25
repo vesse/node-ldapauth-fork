@@ -1,5 +1,9 @@
 # node-ldapauth-fork Changelog
 
+## 4.3.2
+
+  - [pull request #83] Allow any @types/node version
+
 ## 4.3.0
 
   - [issue #59, pull request #80] Add starttls
