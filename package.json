@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@types/ldapjs": "^1.0.4",
-    "@types/node": "^10.17.5",
+    "@types/node": "*",
     "bcryptjs": "^2.4.0",
     "ldapjs": "next",
     "lru-cache": "^5.1.1"
