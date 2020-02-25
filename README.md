@@ -1,6 +1,6 @@
 # ldapauth-fork
 
-[![Sponsored by Leonidas](https://img.shields.io/badge/sponsored%20by-leonidas-389fc1.svg)](https://leonidasoy.fi/opensource)
+[![Sponsored by Wakeone](https://img.shields.io/badge/sponsored%20by-wakeone-389fc1.svg)](https://wakeone.co)
 
 Fork of [node-ldapauth](https://github.com/trentm/node-ldapauth) - A simple node.js lib to authenticate against an LDAP server.
 
@@ -130,4 +130,4 @@ var basicAuthMiddleware = function(req, res, next) {
 
 MIT
 
-`ldapauth-fork` has been partially sponsored by [Leonidas Ltd](https://leonidasoy.fi/opensource).
+`ldapauth-fork` has been partially sponsored by [Wakeone Ltd](https://wakeone.co/).
