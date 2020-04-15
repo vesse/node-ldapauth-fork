@@ -7,7 +7,7 @@
 
 import { EventEmitter } from 'events';
 import { ClientOptions, ErrorCallback } from 'ldapjs';
-import { SecureContextOptions } from 'tls';
+import { ConnectionOptions } from 'tls';
 
 declare namespace LdapAuth {
     type Scope = 'base' | 'one' | 'sub';
@@ -109,9 +109,10 @@ declare namespace LdapAuth {
          */
         starttls?: boolean;
         /**
-         * Provides the secure TLS context
+         * Provides the secure TLS options. Type is ConnectionOptions because that's what is expected in
+         * https://github.com/DefinitelyTyped/DefinitelyTyped/blob/56b65142ea06036a7846a46a43da3e9a1b856e22/types/node/v12/tls.d.ts#L661
          */
-        tlsOptions?: SecureContextOptions;
+        tlsOptions?: ConnectionOptions;
     }
 }
 
