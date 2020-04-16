@@ -7,7 +7,7 @@
 
 import { EventEmitter } from 'events';
 import { ClientOptions, ErrorCallback } from 'ldapjs';
-import { SecureContextOptions } from 'tls';
+import { ConnectionOptions } from 'tls';
 
 declare namespace LdapAuth {
     type Scope = 'base' | 'one' | 'sub';
@@ -109,9 +109,9 @@ declare namespace LdapAuth {
          */
         starttls?: boolean;
         /**
-         * Provides the secure TLS context
+         * Provides the secure TLS options passed to tls.connect in ldapjs
          */
-        tlsOptions?: SecureContextOptions;
+        tlsOptions?: ConnectionOptions;
     }
 }
 

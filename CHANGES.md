@@ -1,5 +1,9 @@
 # node-ldapauth-fork Changelog
 
+## 4.3.3
+
+  - [pull request #86] Fix typedef of tlsOptions
+
 ## 4.3.2
 
   - [pull request #83] Allow any @types/node version
