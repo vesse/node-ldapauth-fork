@@ -5,13 +5,12 @@ branches:
     - master
 
 node_js:
-  - "6.10"
-  - "7.10"
-  - "8.10"
-  - "9"
+  - node
+  - lts/*
+  - 14
+  - 12
+  - 10
 
 notifications:
   email:
     - vesa.poikajarvi@iki.fi
-
-sudo: false
