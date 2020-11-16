@@ -27,13 +27,13 @@
     "test": "cd test && node test.js"
   },
   "dependencies": {
+    "@types/ldapjs": "^1.0.9",
     "bcryptjs": "^2.4.0",
     "ldapjs": "^2.2.1",
     "lru-cache": "^6.0.0"
   },
   "devDependencies": {
     "@types/bunyan": "^1.8.6",
-    "@types/ldapjs": "^1.0.9",
     "@types/node": "^14.14.7",
     "bunyan": "^1.8.14",
     "eslint": "^7.13.0",
