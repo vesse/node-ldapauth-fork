@@ -1,5 +1,9 @@
 # node-ldapauth-fork Changelog
 
+## 5.0.0
+
+  - Update `ldapjs` to version 2
+
 ## 4.3.3
 
   - [pull request #86] Fix typedef of tlsOptions
