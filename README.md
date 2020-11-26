@@ -12,8 +12,6 @@ Multiple [ldapjs](http://ldapjs.org/) client options have been made available.
 
 ## Usage
 
-**Note:** `close` does not work on Node 10. See [joyent/node-ldapjs#483](https://github.com/joyent/node-ldapjs/issues/483) for more information. Pre-release version is available, and it works on Node 10. Install with `npm i ldapauth-fork@next`.
-
 ```javascript
 var LdapAuth = require('ldapauth-fork');
 var options = {
