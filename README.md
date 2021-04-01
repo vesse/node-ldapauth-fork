@@ -42,8 +42,8 @@ Required ldapjs client options:
 
 ldapauth-fork options:
 
-  - `bindDN` - Admin connection DN, e.g. *uid=myapp,ou=users,dc=example,dc=org*. Optional. If not given at all, admin client is not bound. Giving empty string may result in anonymous bind when allowed.
-  - `bindCredentials` - Password for bindDN.
+  - `bindDN` - Admin connection DN, e.g. *uid=myapp,ou=users,dc=example,dc=org*. Optional. If not given at all, admin client is not bound. Giving empty string may result in anonymous bind when allowed. If you only want get request user data, you can get request username with {{username}}
+  - `bindCredentials` - Password for bindDN. If you are using only requested user data , set it with {{password}}
   - `searchBase` - The base DN from which to search for users by username. E.g. *ou=users,dc=example,dc=org*
   - `searchFilter` - LDAP search filter with which to find a user by username, e.g. *(uid={{username}})*. Use the literal *{{username}}* to have the given username interpolated in for the LDAP search.
   - `searchAttributes` - Optional, default all. Array of attributes to fetch from LDAP server.
