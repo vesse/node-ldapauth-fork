@@ -38,7 +38,7 @@ auth.close(function(err) { ... })
 
 Required ldapjs client options:
 
-  - `url` - LDAP server URL, eg. *ldaps://ldap.example.org:636*
+  - `url` - LDAP server URL, eg. *ldaps://ldap.example.org:636*, or a list of URLs, e.g. `["ldaps://ldap.example.org:636"]`
 
 ldapauth-fork options:
 
