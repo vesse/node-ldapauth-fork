@@ -1,5 +1,9 @@
 # node-ldapauth-fork Changelog
 
+## 5.0.2
+
+  - [pull request #97] Sanitize group search filters
+
 ## 5.0.0
 
   - Update `ldapjs` to version 2
