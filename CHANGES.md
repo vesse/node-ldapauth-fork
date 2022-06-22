@@ -1,5 +1,9 @@
 # node-ldapauth-fork Changelog
 
+## 5.0.3
+
+  - [pull request #99] Ensure `groupDnProperty` is included in `attributes`
+
 ## 5.0.2
 
   - [pull request #97] Sanitize group search filters
