@@ -2,39 +2,39 @@
 
 ## 5.0.3
 
-  - [pull request #99] Ensure `groupDnProperty` is included in `attributes`
+- [pull request #99] Ensure `groupDnProperty` is included in `attributes`
 
 ## 5.0.2
 
-  - [pull request #97] Sanitize group search filters
+- [pull request #97] Sanitize group search filters
 
 ## 5.0.0
 
-  - Update `ldapjs` to version 2
+- Update `ldapjs` to version 2
 
 ## 4.3.3
 
-  - [pull request #86] Fix typedef of tlsOptions
+- [pull request #86] Fix typedef of tlsOptions
 
 ## 4.3.2
 
-  - [pull request #83] Allow any @types/node version
+- [pull request #83] Allow any @types/node version
 
 ## 4.3.0
 
-  - [issue #59, pull request #80] Add starttls
+- [issue #59, pull request #80] Add starttls
 
 ## 4.2.0
 
-  - [issue #69, pull request #71] Defer installation of reconnect event listener
+- [issue #69, pull request #71] Defer installation of reconnect event listener
 
 ## 4.1.1
 
-  - [issue #74] Remove direct moment.js dependency
+- [issue #74] Remove direct moment.js dependency
 
 ## 4.1.0
 
-  - [pull request #68] Rebind admin client after reconnect
+- [pull request #68] Rebind admin client after reconnect
 
 ## 4.0.2
 
@@ -100,17 +100,15 @@
 
 ```javascript
 new LdapAuth({
-  "url": "ldaps://ldap.example.com:636",
-  "adminDn": "cn=LdapAdmin,dc=local",
-  "adminPassword": "LdapAdminPassword",
-  "searchBase": "dc=users,dc=local",
-  "searchFilter": "(&(objectClass=person)(sAMAccountName={{username}}))",
-  "searchAttributes": [
-    "dn", "cn", "givenName", "name", "memberOf", "sAMAccountName"
-  ],
-  "groupSearchBase": "dc=groups,dc=local",
-  "groupSearchFilter": "(member={{dn}})",
-  "groupSearchAttributes": ["dn", "cn", "sAMAccountName"]
+  url: 'ldaps://ldap.example.com:636',
+  adminDn: 'cn=LdapAdmin,dc=local',
+  adminPassword: 'LdapAdminPassword',
+  searchBase: 'dc=users,dc=local',
+  searchFilter: '(&(objectClass=person)(sAMAccountName={{username}}))',
+  searchAttributes: ['dn', 'cn', 'givenName', 'name', 'memberOf', 'sAMAccountName'],
+  groupSearchBase: 'dc=groups,dc=local',
+  groupSearchFilter: '(member={{dn}})',
+  groupSearchAttributes: ['dn', 'cn', 'sAMAccountName'],
 });
 ```
 
@@ -184,17 +182,14 @@ new LdapAuth({
 
 (nothing yet)
 
-
 ## 2.2.2
 
 - [issue #5] update to bcrypt 0.7.5 (0.7.3 fixes potential mem issues)
-
 
 ## 2.2.1
 
 - Fix a bug where ldapauth `authenticate()` would raise an example on an empty
   username.
-
 
 ## 2.2.0
 
@@ -202,11 +197,9 @@ new LdapAuth({
   Note: This makes ldapauth only work with node >=0.8 (because of internal dep
   in ldapjs 0.5).
 
-
 ## 2.1.0
 
 - Update to ldapjs 0.4 (from 0.3). Crossing fingers that this doesn't cause breakage.
-
 
 ## 2.0.0
 
@@ -214,9 +207,6 @@ new LdapAuth({
 - [issue #1] Update to bcrypt 0.5. This means increasing the base node from 0.4
   to 0.6, hence the major version bump.
 
-
 ## 1.0.2
 
 First working version.
-
-

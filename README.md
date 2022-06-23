@@ -38,44 +38,44 @@ auth.close(function(err) { ... })
 
 Required ldapjs client options:
 
-  - `url` - LDAP server URL, eg. *ldaps://ldap.example.org:636*, or a list of URLs, e.g. `["ldaps://ldap.example.org:636"]`
+- `url` - LDAP server URL, eg. _ldaps://ldap.example.org:636_, or a list of URLs, e.g. `["ldaps://ldap.example.org:636"]`
 
 ldapauth-fork options:
 
-  - `bindDN` - Admin connection DN, e.g. *uid=myapp,ou=users,dc=example,dc=org*. Optional. If not given at all, admin client is not bound. Giving empty string may result in anonymous bind when allowed.
-  - `bindCredentials` - Password for bindDN.
-  - `searchBase` - The base DN from which to search for users by username. E.g. *ou=users,dc=example,dc=org*
-  - `searchFilter` - LDAP search filter with which to find a user by username, e.g. *(uid={{username}})*. Use the literal *{{username}}* to have the given username interpolated in for the LDAP search.
-  - `searchAttributes` - Optional, default all. Array of attributes to fetch from LDAP server.
-  - `bindProperty` - Optional, default *dn*. Property of the LDAP user object to use when binding to verify the password. E.g. *name*, *email*
-  - `searchScope` -  Optional, default *sub*. Scope of the search, one of *base*, *one*, or *sub*.
+- `bindDN` - Admin connection DN, e.g. _uid=myapp,ou=users,dc=example,dc=org_. Optional. If not given at all, admin client is not bound. Giving empty string may result in anonymous bind when allowed.
+- `bindCredentials` - Password for bindDN.
+- `searchBase` - The base DN from which to search for users by username. E.g. _ou=users,dc=example,dc=org_
+- `searchFilter` - LDAP search filter with which to find a user by username, e.g. _(uid={{username}})_. Use the literal _{{username}}_ to have the given username interpolated in for the LDAP search.
+- `searchAttributes` - Optional, default all. Array of attributes to fetch from LDAP server.
+- `bindProperty` - Optional, default _dn_. Property of the LDAP user object to use when binding to verify the password. E.g. _name_, _email_
+- `searchScope` - Optional, default _sub_. Scope of the search, one of _base_, _one_, or _sub_.
 
 ldapauth-fork can look for valid users groups too. Related options:
 
-  - `groupSearchBase` - Optional. The base DN from which to search for groups. If defined, also `groupSearchFilter` must be defined for the search to work.
-  - `groupSearchFilter` - Optional. LDAP search filter for groups. Place literal *{{dn}}* in the filter to have it replaced by the property defined with `groupDnProperty` of the found user object. *{{username}}* is also available and will be replaced with the *uid* of the found user. This is useful for example to filter PosixGroups by *memberUid*. Optionally you can also assign a function instead. The found user is passed to the function and it should return a valid search filter for the group search.
-  - `groupSearchAttributes` - Optional, default all. Array of attributes to fetch from LDAP server.
-  - `groupDnProperty` - Optional, default *dn*. The property of user object to use in *{{dn}}* interpolation of `groupSearchFilter`.
-  - `groupSearchScope` - Optional, default *sub*.
+- `groupSearchBase` - Optional. The base DN from which to search for groups. If defined, also `groupSearchFilter` must be defined for the search to work.
+- `groupSearchFilter` - Optional. LDAP search filter for groups. Place literal _{{dn}}_ in the filter to have it replaced by the property defined with `groupDnProperty` of the found user object. _{{username}}_ is also available and will be replaced with the _uid_ of the found user. This is useful for example to filter PosixGroups by _memberUid_. Optionally you can also assign a function instead. The found user is passed to the function and it should return a valid search filter for the group search.
+- `groupSearchAttributes` - Optional, default all. Array of attributes to fetch from LDAP server.
+- `groupDnProperty` - Optional, default _dn_. The property of user object to use in _{{dn}}_ interpolation of `groupSearchFilter`.
+- `groupSearchScope` - Optional, default _sub_.
 
 Other ldapauth-fork options:
 
-  - `includeRaw` - Optional, default false. Set to true to add property `_raw` containing the original buffers to the returned user object. Useful when you need to handle binary attributes
-  - `cache` - Optional, default false. If true, then up to 100 credentials at a time will be cached for 5 minutes.
-  - `log` - Bunyan logger instance, optional. If given this will result in TRACE-level error logging for component:ldapauth. The logger is also passed forward to ldapjs.
+- `includeRaw` - Optional, default false. Set to true to add property `_raw` containing the original buffers to the returned user object. Useful when you need to handle binary attributes
+- `cache` - Optional, default false. If true, then up to 100 credentials at a time will be cached for 5 minutes.
+- `log` - Bunyan logger instance, optional. If given this will result in TRACE-level error logging for component:ldapauth. The logger is also passed forward to ldapjs.
 
 Optional ldapjs options, see [ldapjs documentation](https://github.com/mcavage/node-ldapjs/blob/v1.0.1/docs/client.md):
 
-  - `tlsOptions` - Needed for TLS connection. See [Node.js documentation](https://nodejs.org/api/tls.html#tls_tls_connect_options_callback)
-  - `socketPath`
-  - `timeout`
-  - `connectTimeout`
-  - `idleTimeout`
-  - `reconnect`
-  - `strictDN`
-  - `queueSize`
-  - `queueTimeout`
-  - `queueDisable`
+- `tlsOptions` - Needed for TLS connection. See [Node.js documentation](https://nodejs.org/api/tls.html#tls_tls_connect_options_callback)
+- `socketPath`
+- `timeout`
+- `connectTimeout`
+- `idleTimeout`
+- `reconnect`
+- `strictDN`
+- `queueSize`
+- `queueTimeout`
+- `queueDisable`
 
 ## How it works
 
@@ -98,22 +98,22 @@ var ldap = new LdapAuth({
   bindCredentials: 'mypassword',
   searchBase: 'ou=users,dc=example,dc=org',
   searchFilter: '(uid={{username}})',
-  reconnect: true
+  reconnect: true,
 });
 
-var rejectBasicAuth = function(res) {
+var rejectBasicAuth = function (res) {
   res.statusCode = 401;
   res.setHeader('WWW-Authenticate', 'Basic realm="Example"');
   res.end('Access denied');
-}
+};
 
-var basicAuthMiddleware = function(req, res, next) {
+var basicAuthMiddleware = function (req, res, next) {
   var credentials = basicAuth(req);
   if (!credentials) {
     return rejectBasicAuth(res);
   }
 
-  ldap.authenticate(credentials.name, credentials.pass, function(err, user) {
+  ldap.authenticate(credentials.name, credentials.pass, function (err, user) {
     if (err) {
       return rejectBasicAuth(res);
     }
