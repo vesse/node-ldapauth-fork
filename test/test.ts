@@ -19,7 +19,6 @@ const opts: LdapAuth.Options = {
   searchFilter: '(uid={{username}})',
   log: log,
   cache: true,
-  includeRaw: true,
   groupSearchFilter: '(member={{dn}})',
   groupSearchBase: 'dc=example,dc=com',
 };

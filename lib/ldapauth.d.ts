@@ -92,13 +92,6 @@ declare namespace LdapAuth {
     groupDnProperty?: string;
 
     /**
-     * Set to true to add property '_raw' containing the original buffers
-     * to the returned user object. Useful when you need to handle binary
-     * attributes
-     */
-    includeRaw?: boolean;
-
-    /**
      * If true, then up to 100 credentials at a time will be cached for
      * 5 minutes.
      */

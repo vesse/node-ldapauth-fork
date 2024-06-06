@@ -60,7 +60,6 @@ ldapauth-fork can look for valid users groups too. Related options:
 
 Other ldapauth-fork options:
 
-- `includeRaw` - Optional, default false. Set to true to add property `_raw` containing the original buffers to the returned user object. Useful when you need to handle binary attributes
 - `cache` - Optional, default false. If true, then up to 100 credentials at a time will be cached for 5 minutes.
 - `log` - Bunyan logger instance, optional. If given this will result in TRACE-level error logging for component:ldapauth. The logger is also passed forward to ldapjs.
 
