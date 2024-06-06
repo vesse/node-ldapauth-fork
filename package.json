@@ -17,7 +17,7 @@
     "url": "git://github.com/vesse/node-ldapauth-fork.git"
   },
   "engines": {
-    "node": ">=0.8.0"
+    "node": ">=16.14.0"
   },
   "scripts": {
     "prepublishOnly": "npm run lint",
@@ -26,7 +26,8 @@
     "prettier:fix": "prettier --write '**/*.{js,json,md,ts}'",
     "prettier": "prettier --list-different '**/*.{js,json,md,ts}'",
     "pretest": "cd test && tsc",
-    "test": "cd test && node test.js"
+    "test": "cd test && node test.js",
+    "prepare": "husky"
   },
   "dependencies": {
     "bcryptjs": "^2.4.0",
@@ -42,6 +43,8 @@
     "eslint": "^9.4.0",
     "eslint-plugin-jsdoc": "^48.2.8",
     "globals": "^15.3.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.5",
     "prettier": "^3.3.1",
     "typescript": "^5.4.5",
     "watch": "^1.0.2"
