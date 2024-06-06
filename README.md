@@ -73,6 +73,7 @@ Optional ldapjs options, see [ldapjs documentation](https://github.com/mcavage/n
 - `queueSize`
 - `queueTimeout`
 - `queueDisable`
+- `timeLimit`
 
 ## How it works
 
