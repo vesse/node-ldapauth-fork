@@ -1,7 +1,5 @@
 # ldapauth-fork
 
-[![Sponsored by Wakeone](https://img.shields.io/badge/sponsored%20by-wakeone-389fc1.svg)](https://wakeone.co)
-
 Fork of [node-ldapauth](https://github.com/trentm/node-ldapauth) - A simple node.js lib to authenticate against an LDAP server.
 
 ## About the fork
