@@ -1,4 +1,16 @@
 # node-ldapauth-fork Changelog
+## 6.0.0
+
+- ldapjs library upgraded to version 3
+- `includeRaw` has been removed from `clientOptions`. Append `;binary` to the `searchAttributes` option if you need the binary data, for example with objectGUID:
+```javascript
+new LdapAuth({
+  searchAttributes: ['dn', 'cn', 'givenName', 'name', 'memberOf', 'sAMAccountName', 'objectGUID;binary'],
+});
+```
+The resulting user object will then have a property `objectGUID;binary` with the base64 encoded value of the `objectGUID` LDAP attribute.
+
+This change was made as a consequence of changes in the underlying ldapjs library, see https://github.com/ldapjs/node-ldapjs/releases/tag/v3.0.0 section Known Breaking Changes.
 
 ## 5.0.3
 
